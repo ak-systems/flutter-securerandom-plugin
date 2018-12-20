@@ -1,8 +1,8 @@
-#import "SecurerandomPlugin.h"
+#import "SecureRandomPlugin.h"
 #import <securerandom/securerandom-Swift.h>
 
-@implementation SecurerandomPlugin
+@implementation SecureRandomPlugin
 + (void)registerWithRegistrar:(NSObject<FlutterPluginRegistrar>*)registrar {
-  [SwiftSecurerandomPlugin registerWithRegistrar:registrar];
+  [SwiftSecureRandomPlugin registerWithRegistrar:registrar];
 }
 @end

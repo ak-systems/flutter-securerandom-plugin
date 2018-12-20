@@ -18,8 +18,8 @@ public class SecureRandomPlugin implements MethodCallHandler {
   @Override
   public void onMethodCall(MethodCall call, Result result) {
     switch (call.method) {
-      case "generateSeed":
-        generateSeed(call, result);
+      case "generate":
+        generate(call, result);
         break;
       default:
         result.notImplemented();
@@ -27,7 +27,7 @@ public class SecureRandomPlugin implements MethodCallHandler {
     }
   }
 
-  private void generateSeed(final MethodCall call, final Result result) {
+  private void generate(final MethodCall call, final Result result) {
     final int numBytes = call.argument("numBytes");
     SecureRandom random = new SecureRandom();
     final byte[] bytes = random.generateSeed(numBytes);

@@ -17,7 +17,7 @@ class _MyAppState extends State<MyApp> {
   @override
   void initState() {
     super.initState();
-    SecureRandom.generateSeed(32).then((r) => setState(() => _random = r));
+    SecureRandom.generate(32).then((r) => setState(() => _random = r));
   }
 
   @override
